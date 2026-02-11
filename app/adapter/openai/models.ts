@@ -6,29 +6,19 @@ export const provider = {
 
 export const modelList: LLMModel[] = [
   {
-    'name': 'gpt-4o',
-    'displayName': 'GPT 4o',
+    'name': 'gpt-5-nano',
+    'displayName': 'gpt-5-nano',
     provider
   },
   {
-    'name': 'gpt-4o-mini',
-    'displayName': 'GPT 4o mini',
+    'name': 'gpt-5.2',
+    'displayName': 'gpt-5.2',
     provider
   },
   {
-    'name': 'gpt-3.5-turbo',
-    'displayName': 'GPT 3.5 Turbo',
+    'name': 'gpt-5.2-high',
+    'displayName': 'gpt-5.2-high',
     provider
-  },
-  {
-    'name': 'gpt-4-turbo-preview',
-    'displayName': 'GPT 4 Turbo',
-    provider
-  },
-  {
-    'name': 'gpt-4-32k',
-    'displayName': 'GPT 4 32k',
-    provider
-  },
+  }
   
 ]
