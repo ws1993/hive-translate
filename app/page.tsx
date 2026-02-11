@@ -1,5 +1,5 @@
 'use client'
-import { Select, Input, message, Alert, Popover, AutoComplete } from 'antd';
+import { Select, Input, message, Alert, Popover } from 'antd';
 const { TextArea } = Input;
 import Link from 'next/link';
 import Image from 'next/image';
@@ -191,7 +191,7 @@ export default function Home() {
           <div className="grid mt-4 md:grid-cols-2 md:mx-0 md:gap-4 grid-cols-1 gap-0 mx-4">
             <div>
               <div className='flex flex-row'>
-                <AutoComplete
+                <Select
                   defaultValue="Auto"
                   value={selectedFromLanguage}
                   size='large'
@@ -209,17 +209,13 @@ export default function Home() {
                     { value: 'German', label: l('german') },
                     { value: 'Spanish', label: l('spanish') },
                   ]}
-                  filterOption={(inputValue, option) =>
-                    option!.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1 ||
-                    option!.label.toString().toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-                  }
                 />
                 <Button
                   className='flex-grow-0 m-2'
                   type='text'
                   onClick={swapLanguage}
                   icon={<SwapOutlined style={{ color: '#ccc', }} />} size='small' />
-                <AutoComplete
+                <Select
                   defaultValue="Simplified Chinese"
                   value={selectedToLanguage}
                   id='toLanguage'
@@ -236,10 +232,6 @@ export default function Home() {
                     { value: 'German', label: l('german') },
                     { value: 'Spanish', label: l('spanish') },
                   ]}
-                  filterOption={(inputValue, option) =>
-                    option!.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1 ||
-                    option!.label.toString().toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-                  }
                 />
               </div>
               <div className='mt-4'>
